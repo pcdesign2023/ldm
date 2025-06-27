@@ -1,162 +1,158 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, Star, CheckCircle, TrendingUp, Users, Award } from 'lucide-react';
 
-const Footer: React.FC = () => {
+const Footer: React.FC<{ onCtaClick?: () => void }> = ({ onCtaClick = () => {} }) => {
   const currentYear = new Date().getFullYear();
 
-  const footerLinks = {
-    Solutions: [
-      'Paige AI',
-      'Google Business Pro',
-      'Reviews Software',
-      'Citation Software',
-      'Agency Program'
-    ],
-    'Free Tools': [
-      'ProfilePro',
-      'GBP Auditor',
-      'Heatmap Auditor',
-      'Citation Checker',
-      'Review Generator'
-    ],
-    Company: [
-      'About Us',
-      'Blog',
-      'Careers',
-      'Press',
-      'Contact'
-    ],
-    Support: [
-      'Help Center',
-      'Documentation',
-      'API Reference',
-      'Community',
-      'Status'
-    ]
-  };
+  const keyFeatures = [
+    { icon: <TrendingUp className="w-5 h-5" />, text: "AI-Powered Optimization" },
+    { icon: <Star className="w-5 h-5" />, text: "5-Star Review Management" },
+    { icon: <Users className="w-5 h-5" />, text: "10,000+ Happy Clients" },
+    { icon: <Award className="w-5 h-5" />, text: "Industry Leading Results" }
+  ];
 
-  const socialLinks = [
-    { icon: <Facebook className="w-5 h-5" />, href: '#', label: 'Facebook' },
-    { icon: <Twitter className="w-5 h-5" />, href: '#', label: 'Twitter' },
-    { icon: <Linkedin className="w-5 h-5" />, href: '#', label: 'LinkedIn' },
-    { icon: <Instagram className="w-5 h-5" />, href: '#', label: 'Instagram' },
+  const testimonials = [
+    {
+      text: "LDM transformed our local SEO. We went from page 3 to #1 in just 3 months!",
+      author: "Sarah Johnson",
+      business: "Plumbing Pro Services"
+    },
+    {
+      text: "The AI automation is incredible. Our Google Business Profile now runs itself.",
+      author: "Mike Chen",
+      business: "Chen's Auto Repair"
+    }
   ];
 
   return (
-    <footer className="bg-gray-900 border-t border-gray-800">
+    <footer className="bg-gradient-to-b from-gray-900 to-black border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
-        <div className="py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-6 gap-8">
+        <div className="py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Company Info */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="lg:col-span-2"
+              className="lg:col-span-1"
             >
-              <div className="mb-6">
+              <div className="mb-8">
                 <img 
                   src="https://localdigitalmarketing.us/wp-content/uploads/2024/11/xLocal-SEO-in-Revere-MA-1.png.pagespeed.ic.RLBzAjNqlr.png" 
-                  alt="Merchynt" 
-                  className="h-8 w-auto max-w-[120px]" 
+                  alt="Local Marketing Agency" 
+                  className="h-10 w-auto max-w-[140px] mb-6 filter invert brightness-0" 
                 />
-                <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
+                <p className="text-gray-300 text-base leading-relaxed max-w-sm mb-6">
                   The most advanced AI-powered Google Business Profile management platform. 
-                  Automate your local SEO and rank higher on Google Maps.
+                  Automate your local SEO and rank higher on Google Maps with proven results.
                 </p>
+                
+                {/* Key Features */}
+                <div className="space-y-3">
+                  {keyFeatures.map((feature, index) => (
+                    <motion.div
+                      key={feature.text}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: 0.1 * index }}
+                      className="flex items-center space-x-3"
+                    >
+                      <div className="flex-shrink-0 w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white">
+                        {feature.icon}
+                      </div>
+                      <span className="text-gray-300 text-sm font-medium">{feature.text}</span>
+                    </motion.div>
+                  ))}
+                </div>
               </div>
               
               {/* Contact Info */}
-              <div className="space-y-3">
-                <div className="flex items-center text-gray-400 text-sm">
-                  <Mail className="w-4 h-4 mr-3 text-blue-400" />
-                  <a href="mailto:hello@merchynt.com" className="hover:text-white transition-colors">
-                    hello@merchynt.com
-                  </a>
-                </div>
-                <div className="flex items-center text-gray-400 text-sm">
-                  <Phone className="w-4 h-4 mr-3 text-blue-400" />
-                  <a href="tel:+1-555-0123" className="hover:text-white transition-colors">
-                    +1 (555) 012-3456
-                  </a>
-                </div>
-                <div className="flex items-center text-gray-400 text-sm">
-                  <MapPin className="w-4 h-4 mr-3 text-blue-400" />
-                  <span>San Francisco, CA</span>
+              <div className="space-y-4">
+                <h3 className="text-white font-semibold text-lg mb-4">Get In Touch</h3>
+                <div className="space-y-3">
+                  <div className="flex items-center text-gray-300 text-sm group">
+                    <Mail className="w-5 h-5 mr-4 text-blue-400 group-hover:text-blue-300 transition-colors" />
+                    <a href="mailto:info@localdigitalmarketing.us" className="hover:text-white transition-colors">
+                      info@localdigitalmarketing.us
+                    </a>
+                  </div>
+                  <div className="flex items-center text-gray-300 text-sm group">
+                    <Phone className="w-5 h-5 mr-4 text-blue-400 group-hover:text-blue-300 transition-colors" />
+                    <a href="tel:+1-781-805-0003" className="hover:text-white transition-colors">
+                      +1 (781) 805-0003
+                    </a>
+                  </div>
+                  <div className="flex items-center text-gray-300 text-sm">
+                    <MapPin className="w-5 h-5 mr-4 text-blue-400" />
+                    <span>Boston, MA</span>
+                  </div>
                 </div>
               </div>
             </motion.div>
 
-            {/* Footer Links */}
-            {Object.entries(footerLinks).map(([category, links], categoryIndex) => (
+            {/* Testimonials */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="lg:col-span-2"
+            >
+              <h3 className="text-white font-semibold text-xl mb-8">What Our Clients Say</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {testimonials.map((testimonial, index) => (
+                  <motion.div
+                    key={testimonial.author}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.3 + 0.1 * index }}
+                    className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 border border-gray-700 hover:border-gray-600 transition-all duration-300"
+                  >
+                    <div className="flex items-center mb-4">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                      ))}
+                    </div>
+                    <p className="text-gray-300 text-sm leading-relaxed mb-4 italic">
+                      "{testimonial.text}"
+                    </p>
+                    <div>
+                      <p className="text-white font-medium text-sm">{testimonial.author}</p>
+                      <p className="text-gray-400 text-xs">{testimonial.business}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+              
+              {/* CTA Section */}
               <motion.div
-                key={category}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1 * (categoryIndex + 1) }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                className="mt-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-6 text-center"
               >
-                <h3 className="text-white font-semibold mb-4">{category}</h3>
-                <ul className="space-y-2">
-                  {links.map((link, linkIndex) => (
-                    <motion.li
-                      key={link}
-                      initial={{ opacity: 0, x: -10 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: 0.2 + 0.05 * linkIndex }}
-                    >
-                      <a 
-                        href="#" 
-                        className="text-gray-400 hover:text-white transition-colors text-sm"
-                      >
-                        {link}
-                      </a>
-                    </motion.li>
-                  ))}
-                </ul>
+                <h4 className="text-white font-bold text-lg mb-2">Ready to Dominate Local Search?</h4>
+                <p className="text-blue-100 text-sm mb-4">
+                  Join thousands of businesses already ranking #1 on Google Maps
+                </p>
+                <motion.button
+                  onClick={onCtaClick}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
+                >
+                  Start Your Free Trial
+                </motion.button>
               </motion.div>
-            ))}
+            </motion.div>
           </div>
         </div>
-
-        {/* Newsletter Signup */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="py-8 border-t border-gray-800"
-        >
-          <div className="flex flex-col lg:flex-row items-center justify-between">
-            <div className="mb-6 lg:mb-0">
-              <h3 className="text-white font-semibold text-lg mb-2">
-                Stay updated with LDM
-              </h3>
-              <p className="text-gray-400 text-sm">
-                Get the latest features, tips, and local SEO insights delivered to your inbox.
-              </p>
-            </div>
-            
-            <div className="flex w-full lg:w-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 lg:w-80 px-4 py-3 bg-gray-800 border border-gray-700 rounded-l-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 bg-gradient-to-r from-teal-400 to-blue-500 hover:from-teal-500 hover:to-blue-600 text-white font-semibold rounded-r-lg transition-all duration-300"
-              >
-                Subscribe
-              </motion.button>
-            </div>
-          </div>
-        </motion.div>
 
         {/* Bottom Bar */}
         <motion.div
@@ -164,45 +160,25 @@ const Footer: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="py-6 border-t border-gray-800"
+          className="py-8 border-t border-gray-800"
         >
           <div className="flex flex-col lg:flex-row items-center justify-between">
-            <div className="flex flex-col lg:flex-row items-center space-y-2 lg:space-y-0 lg:space-x-6 mb-4 lg:mb-0">
+            <div className="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-8 mb-4 lg:mb-0">
               <p className="text-gray-400 text-sm">
-                © {currentYear} Merchynt. All rights reserved.
+                © {currentYear} Local Marketing Agency. All rights reserved.
               </p>
-              
-              <div className="flex items-center space-x-6">
-                <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
-                  Privacy Policy
-                </a>
-                <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
-                  Terms of Service
-                </a>
-                <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
-                  Cookie Policy
-                </a>
-              </div>
             </div>
             
-            {/* Social Links */}
+            {/* Trust Badges */}
             <div className="flex items-center space-x-4">
-              {socialLinks.map((social, index) => (
-                <motion.a
-                  key={social.label}
-                  href={social.href}
-                  initial={{ opacity: 0, scale: 0 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: 0.7 + 0.1 * index }}
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  whileTap={{ scale: 0.9 }}
-                  className="w-10 h-10 bg-gray-800 hover:bg-gray-700 border border-gray-700 hover:border-gray-600 rounded-full flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300"
-                  aria-label={social.label}
-                >
-                  {social.icon}
-                </motion.a>
-              ))}
+              <div className="flex items-center space-x-2 text-gray-400 text-sm">
+                <CheckCircle className="w-4 h-4 text-green-400" />
+                <span>SSL Secured</span>
+              </div>
+              <div className="flex items-center space-x-2 text-gray-400 text-sm">
+                <CheckCircle className="w-4 h-4 text-green-400" />
+                <span>24/7 Support</span>
+              </div>
             </div>
           </div>
         </motion.div>

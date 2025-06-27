@@ -87,7 +87,7 @@ function App() {
       <LocalMapSection onCtaClick={openModal} />
       <TestimonialsSection onCtaClick={openModal} />
       
-      <Footer />
+      <Footer onCtaClick={openModal} />
       <ContactModal open={modalOpen} onClose={() => setModalOpen(false)} />
     </div>
   );
