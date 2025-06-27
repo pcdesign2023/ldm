@@ -45,7 +45,7 @@ export default function ContactModal({ open, onClose }: { open: boolean, onClose
     }
     setLoading(true);
     try {
-      const res = await fetch('http://127.0.0.1:5050/api/send-contact', {
+      const res = await fetch('https://localdigitalmarketing.onrender.com/api/send-contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
