@@ -29,7 +29,7 @@ app.post('/api/send-contact', async (req, res) => {
   try {
     await transporter.sendMail({
       from: '"LDM Contact" <test@localdigitalmarketing.us>',
-      to: 'revereclassifieds@gmail.com',
+      to: 'othmane.elmeziani@gmail.com',
       subject: 'New Contact Form Submission',
       text: `\nBusiness Name: ${businessName}\nEmail: ${email}\nPhone: ${phone}\nBusiness Activity: ${activity}\n`,
       html: `<h2>New Contact Submission</h2><p><b>Business Name:</b> ${businessName}</p><p><b>Email:</b> ${email}</p><p><b>Phone:</b> ${phone}</p><p><b>Business Activity:</b> ${activity}</p>`
