@@ -582,9 +582,7 @@ const LocalMapSection: React.FC<{ onCtaClick?: () => void }> = ({ onCtaClick = (
             <ArrowRight className="w-5 h-5 ml-2" />
           </motion.button>
           
-          <p className="text-gray-500 text-sm mt-4">
-            Start your $1 trial • See results in 2 minutes • No long-term commitment
-          </p>
+          
         </motion.div>
       </div>
     </section>
