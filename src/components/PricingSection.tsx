@@ -264,8 +264,8 @@ const PricingSection: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 items-center">
             {[
               { icon: <Check className="w-6 h-6" />, text: "30-day money-back guarantee" },
-              { icon: <Users className="w-6 h-6" />, text: "10,000+ happy customers" },
-              { icon: <Zap className="w-6 h-6" />, text: "Setup in under 2 minutes" },
+              { icon: <Users className="w-6 h-6" />, text: "57+ happy customers" },
+              { icon: <Zap className="w-6 h-6" />, text: "We handle setup for you" },
               { icon: <Star className="w-6 h-6" />, text: "4.9/5 average rating" },
             ].map((item, index) => (
               <motion.div

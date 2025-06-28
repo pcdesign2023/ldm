@@ -71,8 +71,8 @@ const FeaturedLogos: React.FC<FeaturedLogosProps> = ({ logos }) => {
           className="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-16 pt-16 border-t border-gray-800"
         >
           {[
-            { number: "10,000+", label: "Businesses Served" },
-            { number: "50M+", label: "Posts Generated" },
+            { number: "55+", label: "Ranked business" },
+            { number: "1500+", label: "Posts Generated" },
             { number: "99.9%", label: "Uptime" },
             { number: "24/7", label: "AI Support" },
           ].map((stat, index) => (

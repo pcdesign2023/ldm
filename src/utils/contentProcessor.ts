@@ -146,7 +146,7 @@ function getFallbackContent(): ProcessedContent {
         title: 'Images',
         description: 'When you upload images to LDM, it optimizes them for your keywords including their file names, meta descriptions, plus geotags them, then uploads them to your Google Business Profile photos section at the optimal moment instead of all at once.',
         images: [
-          'https://cdn.prod.website-files.com/66339c43cbff20ea82838f39/66a78005d5b386744cf7e5e6_merchynt-mobile-image.webp',
+          'https://cdn.prod.website-files.com/66339c43cbff20ea82838f39/67e15f38964681697d7c3e50_Frame%202085666555.jpg',
           'https://cdn.prod.website-files.com/66339c43cbff20ea82838f39/66a7800500822f578f8fec82_merchynt-mobile-image-one.webp'
         ]
       },

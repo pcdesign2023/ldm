@@ -58,18 +58,15 @@ const OptimizationSection: React.FC<{ onCtaClick?: () => void }> = ({ onCtaClick
                 className="inline-flex items-center px-4 py-2 bg-orange-500/20 border border-orange-500/30 rounded-full text-orange-300 text-xs sm:text-sm font-medium mb-4 sm:mb-6"
               >
                 <Zap className="w-4 h-4 mr-2" />
-                Lightning Fast Setup
+                We Handle Setup For You
               </motion.div>
               
               <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
-                Optimize Your GMB in{' '}
-                <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
-                  2 Minutes
-                </span>
+                We Handle Your Google Business Profile Setup
               </h2>
               
               <p className="text-base sm:text-xl text-gray-400 mb-4 sm:mb-8 leading-relaxed">
-                LDM can optimize a Google Business Profile in just two minutes, saving you countless hours trying to rank higher on Google Maps. This optimization covers your description, services, review replies, and more!
+                Our team takes care of your Google Business Profile setup from start to finish—no effort required from you. We handle everything so you can focus on your business!
               </p>
               
               <motion.button
@@ -232,7 +229,7 @@ const OptimizationSection: React.FC<{ onCtaClick?: () => void }> = ({ onCtaClick
         >
           {[
             { icon: <TrendingUp className="w-6 h-6" />, number: "300%", label: "Average Ranking Improvement" },
-            { icon: <Zap className="w-6 h-6" />, number: "2 min", label: "Setup Time" },
+            { icon: <Zap className="w-6 h-6" />, number: "No Setup required", label: "Setup Time" },
             { icon: <CheckCircle className="w-6 h-6" />, number: "98%", label: "Success Rate" },
           ].map((stat, index) => (
             <motion.div

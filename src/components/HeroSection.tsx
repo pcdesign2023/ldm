@@ -82,7 +82,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                   <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400 fill-current" />
                 ))}
               </div>
-              <p className="text-xs sm:text-sm text-gray-300">Trusted by 10,000+ businesses</p>
+              <p className="text-xs sm:text-sm text-gray-300">Trusted by 55+ businesses</p>
             </div>
           </motion.div>
         </div>

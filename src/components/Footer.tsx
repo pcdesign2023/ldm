@@ -8,7 +8,7 @@ const Footer: React.FC<{ onCtaClick?: () => void }> = ({ onCtaClick = () => {} }
   const keyFeatures = [
     { icon: <TrendingUp className="w-5 h-5" />, text: "AI-Powered Optimization" },
     { icon: <Star className="w-5 h-5" />, text: "5-Star Review Management" },
-    { icon: <Users className="w-5 h-5" />, text: "10,000+ Happy Clients" },
+    { icon: <Users className="w-5 h-5" />, text: "57+ Happy Clients" },
     { icon: <Award className="w-5 h-5" />, text: "Industry Leading Results" }
   ];
 
@@ -74,12 +74,7 @@ const Footer: React.FC<{ onCtaClick?: () => void }> = ({ onCtaClick = () => {} }
               <div className="space-y-4">
                 <h3 className="text-white font-semibold text-lg mb-4">Get In Touch</h3>
                 <div className="space-y-3">
-                  <div className="flex items-center text-gray-300 text-sm group">
-                    <Mail className="w-5 h-5 mr-4 text-blue-400 group-hover:text-blue-300 transition-colors" />
-                    <a href="mailto:info@localdigitalmarketing.us" className="hover:text-white transition-colors">
-                      info@localdigitalmarketing.us
-                    </a>
-                  </div>
+                  
                   <div className="flex items-center text-gray-300 text-sm group">
                     <Phone className="w-5 h-5 mr-4 text-blue-400 group-hover:text-blue-300 transition-colors" />
                     <a href="tel:+1-781-805-0003" className="hover:text-white transition-colors">
@@ -147,7 +142,7 @@ const Footer: React.FC<{ onCtaClick?: () => void }> = ({ onCtaClick = () => {} }
                   whileTap={{ scale: 0.95 }}
                   className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
                 >
-                  Start Your Free Trial
+                Grow Your Business Today 
                 </motion.button>
               </motion.div>
             </motion.div>
@@ -165,7 +160,7 @@ const Footer: React.FC<{ onCtaClick?: () => void }> = ({ onCtaClick = () => {} }
           <div className="flex flex-col lg:flex-row items-center justify-between">
             <div className="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-8 mb-4 lg:mb-0">
               <p className="text-gray-400 text-sm">
-                © {currentYear} Local Marketing Agency. All rights reserved.
+                © {currentYear} <a href='https://localdigitalmarketing.us' className='text-white'>Local Marketing Agency</a>. All rights reserved.
               </p>
             </div>
             

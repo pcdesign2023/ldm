@@ -126,7 +126,7 @@ const VideoDemo: React.FC<{ onCtaClick?: () => void }> = ({ onCtaClick = () => {
           className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 pt-16 border-t border-gray-700"
         >
           {[
-            { number: "2 min", label: "Setup Time" },
+            { number: "100%", label: "Setup Done For You" },
             { number: "24/7", label: "Automation" },
             { number: "10x", label: "ROI Increase" },
           ].map((stat, index) => (

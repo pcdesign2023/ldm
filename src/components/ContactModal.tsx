@@ -1,31 +1,7 @@
 import React, { useState } from 'react';
-import Select from 'react-select';
-
-const activities = [
-  { value: 'Plumber', label: 'Plumber' },
-  { value: 'Restaurant', label: 'Restaurant' },
-  { value: 'Salon', label: 'Salon' },
-  { value: 'Dentist', label: 'Dentist' },
-  { value: 'Lawyer', label: 'Lawyer' },
-  { value: 'Electrician', label: 'Electrician' },
-  { value: 'Accountant', label: 'Accountant' },
-  { value: 'Real Estate Agent', label: 'Real Estate Agent' },
-  { value: 'Fitness Trainer', label: 'Fitness Trainer' },
-  { value: 'Landscaper', label: 'Landscaper' },
-  { value: 'Photographer', label: 'Photographer' },
-  { value: 'Mechanic', label: 'Mechanic' },
-  { value: 'Veterinarian', label: 'Veterinarian' },
-  { value: 'Chiropractor', label: 'Chiropractor' },
-  { value: 'Cleaning Service', label: 'Cleaning Service' },
-  { value: 'Marketing Agency', label: 'Marketing Agency' },
-  { value: 'IT Consultant', label: 'IT Consultant' },
-  { value: 'Bakery', label: 'Bakery' },
-  { value: 'Florist', label: 'Florist' },
-  { value: 'Other', label: 'Other' },
-];
 
 export default function ContactModal({ open, onClose }: { open: boolean, onClose: () => void }) {
-  const [form, setForm] = useState({ businessName: '', email: '', phone: '', activity: null });
+  const [form, setForm] = useState({ businessName: '', email: '', phone: '', activity: '' });
   const [loading, setLoading] = useState(false);
   const [feedback, setFeedback] = useState<{ type: 'success' | 'error', message: string } | null>(null);
 
@@ -52,12 +28,12 @@ export default function ContactModal({ open, onClose }: { open: boolean, onClose
           businessName: form.businessName,
           email: form.email,
           phone: form.phone,
-          activity: form.activity.value
+          activity: form.activity
         })
       });
       if (res.ok) {
         setFeedback({ type: 'success', message: 'Thank you! We will contact you soon.' });
-        setForm({ businessName: '', email: '', phone: '', activity: null });
+        setForm({ businessName: '', email: '', phone: '', activity: '' });
       } else {
         setFeedback({ type: 'error', message: 'Failed to send. Please try again later.' });
       }
@@ -76,9 +52,7 @@ export default function ContactModal({ open, onClose }: { open: boolean, onClose
         <button className="absolute top-3 right-3 text-gray-400 hover:text-gray-700" onClick={onClose}>&times;</button>
         <div className="mb-6 text-center">
           <div className="font-bold text-lg text-gray-800 mb-1">Contact Us</div>
-          <div className="text-sm text-gray-600">Email: <a href="mailto:contact@localdigitalmarketing.us" className="underline">contact@localdigitalmarketing.us</a></div>
           <div className="text-sm text-gray-600">Phone: <a href="tel:+17818050003" className="underline">+1 (781) 805-0003</a></div>
-          <div className="text-sm text-gray-600">Working Hours: 8 AM to 6 PM</div>
         </div>
         {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -105,13 +79,12 @@ export default function ContactModal({ open, onClose }: { open: boolean, onClose
             onChange={e => setForm(f => ({ ...f, phone: e.target.value }))}
             required
           />
-          <Select
-            className="w-full"
+          <input
+            className="w-full border rounded px-3 py-2"
             placeholder="Business Activity"
             value={form.activity}
-            onChange={activity => setForm(f => ({ ...f, activity }))}
-            options={activities}
-            isSearchable
+            onChange={e => setForm(f => ({ ...f, activity: e.target.value }))}
+            required
           />
           <button
             type="submit"
