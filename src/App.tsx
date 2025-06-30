@@ -10,7 +10,6 @@ import OptimizationSection from './components/OptimizationSection';
 import LocalMapSection from './components/LocalMapSection';
 import TestimonialsSection from './components/TestimonialsSection';
 import Footer from './components/Footer';
-import ContactModal from './components/ContactModal';
 import CallButton from './components/CallButton';
 import { loadAndProcessContent, ProcessedContent } from './utils/contentProcessor';
 import BeforeAfterSliderSection from './components/BeforeAfterSliderSection';
@@ -33,6 +32,17 @@ function App() {
     };
 
     loadContent();
+  }, []);
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.id = 'mcjs';
+    script.async = true;
+    script.src = 'https://chimpstatic.com/mcjs-connected/js/users/affaa8c96ed418033009ba77a/8c66669d28b5ac76bd60d5acc.js';
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
   }, []);
 
   const openModal = () => setModalOpen(true);
@@ -89,7 +99,6 @@ function App() {
       <TestimonialsSection onCtaClick={openModal} />
       
       <Footer onCtaClick={openModal} />
-      <ContactModal open={modalOpen} onClose={() => setModalOpen(false)} />
       <CallButton />
     </div>
   );
