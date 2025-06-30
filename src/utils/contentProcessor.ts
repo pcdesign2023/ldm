@@ -131,7 +131,7 @@ function getFallbackContent(): ProcessedContent {
       headline: 'Meet LDM, the AI fully automated Google My Business Management software',
       description: 'LDM is trained on thousands of data points and your website data to auto publish content to your Google Business Profile at the perfect time to rank higher.',
       ctas: ['START $1 TRIAL', 'PROOF IT WORKS'],
-      heroImage: 'https://cdn.prod.website-files.com/66339c43cbff20ea82838f39/66a4ffa3064cbda2d4330a29_paige-images.webp'
+      heroImage: 'https://cdn.prod.website-files.com/66339c43cbff20ea82838f39/67e15c4a05f39b2c9515fe82_heatmap4.jpg'
     },
     featuredLogos: [
       'https://cdn.prod.website-files.com/66339c43cbff20ea82838f39/668be7cac2d208f7b685b93b_business-news-logo.svg',
@@ -144,7 +144,7 @@ function getFallbackContent(): ProcessedContent {
     features: [
       {
         title: 'Images',
-        description: 'When you upload images to LDM, it optimizes them for your keywords including their file names, meta descriptions, plus geotags them, then uploads them to your Google Business Profile photos section at the optimal moment instead of all at once.',
+        description: 'We optimize images for your keywords including their file names, meta descriptions, plus geotags them, then we publish them to your Google Business Profile photos section at the optimal moment instead of all at once.',
         images: [
           'https://cdn.prod.website-files.com/66339c43cbff20ea82838f39/67e15f38964681697d7c3e50_Frame%202085666555.jpg',
           'https://cdn.prod.website-files.com/66339c43cbff20ea82838f39/66a7800500822f578f8fec82_merchynt-mobile-image-one.webp'
@@ -152,17 +152,17 @@ function getFallbackContent(): ProcessedContent {
       },
       {
         title: 'Reviews',
-        description: 'LDM can automatically reply to reviews or simply suggest replies for you if you prefer. You can even train LDM to sound exactly how you like to based on the type of Google review you receive.',
+        description: 'LDM will reply to reviews or simply suggest replies for you if you prefer. We\'ll tailor every message to match your brand\'s voice, no matter the type of review.',
         icon_src: 'https://cdn.prod.website-files.com/66339c43cbff20ea82838f39/66a783efdf4c5ff9bfa21758_reviews-icon.svg'
       },
       {
         title: 'Q&As',
-        description: 'LDM can automatically ask hyper specific questions and answer them on your Google Business Profile by using information about your business found on your website.',
+        description: 'LDM will ask hyper specific questions and answer them on your Google Business Profile by using information about your business found on your website.',
         icon_src: 'https://cdn.prod.website-files.com/66339c43cbff20ea82838f39/66a783efa0bdd5c155d36302_q-and-a-icon.svg'
       },
       {
         title: 'Google Business Posts',
-        description: 'LDM can automatically write, schedule and publish posts onto your Google Business Profile. It can even create custom graphics if you don\'t have any and turn your 5-star reviews into posts.',
+        description: 'LDM will write, schedule and publish posts into your Google Business Profile. we will even create custom graphics if you don\'t have any and turn your 5-star reviews into posts.',
         icon_src: 'https://cdn.prod.website-files.com/66339c43cbff20ea82838f39/66a783effe3bfe788c01a0d1_google-post.svg'
       }
     ],

@@ -6,7 +6,6 @@ const Footer: React.FC<{ onCtaClick?: () => void }> = ({ onCtaClick = () => {} }
   const currentYear = new Date().getFullYear();
 
   const keyFeatures = [
-    { icon: <TrendingUp className="w-5 h-5" />, text: "AI-Powered Optimization" },
     { icon: <Star className="w-5 h-5" />, text: "5-Star Review Management" },
     { icon: <Users className="w-5 h-5" />, text: "57+ Happy Clients" },
     { icon: <Award className="w-5 h-5" />, text: "Industry Leading Results" }
@@ -19,7 +18,7 @@ const Footer: React.FC<{ onCtaClick?: () => void }> = ({ onCtaClick = () => {} }
       business: "Plumbing Pro Services"
     },
     {
-      text: "The AI automation is incredible. Our Google Business Profile now runs itself.",
+      text: "The team’s service is outstanding. They’ve completely taken over our Google Business Profile management it’s one less thing to worry about!",
       author: "Mike Chen",
       business: "Chen's Auto Repair"
     }
@@ -46,8 +45,7 @@ const Footer: React.FC<{ onCtaClick?: () => void }> = ({ onCtaClick = () => {} }
                   className="h-10 w-auto max-w-[140px] mb-6 filter invert brightness-0" 
                 />
                 <p className="text-gray-300 text-base leading-relaxed max-w-sm mb-6">
-                  The most advanced AI-powered Google Business Profile management platform. 
-                  Automate your local SEO and rank higher on Google Maps with proven results.
+                The most trusted Google Business Profile management service. Our experts optimize your local SEO to help you rank higher on Google Maps and delivering real results.
                 </p>
                 
                 {/* Key Features */}
@@ -83,7 +81,7 @@ const Footer: React.FC<{ onCtaClick?: () => void }> = ({ onCtaClick = () => {} }
                   </div>
                   <div className="flex items-center text-gray-300 text-sm">
                     <MapPin className="w-5 h-5 mr-4 text-blue-400" />
-                    <span>Boston, MA</span>
+                    <span>Revere, MA</span>
                   </div>
                 </div>
               </div>

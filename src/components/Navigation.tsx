@@ -21,7 +21,9 @@ const Navigation: React.FC<NavigationProps> = ({ logo }) => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full ${
-        scrolled ? 'bg-gray-900/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
+        scrolled 
+          ? 'bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-200' 
+          : 'bg-gradient-to-r from-blue-600/90 to-purple-600/90 backdrop-blur-sm'
       }`}
     >
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 w-full">

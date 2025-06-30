@@ -127,7 +127,7 @@ const VideoDemo: React.FC<{ onCtaClick?: () => void }> = ({ onCtaClick = () => {
         >
           {[
             { number: "100%", label: "Setup Done For You" },
-            { number: "24/7", label: "Automation" },
+            { number: "24/7", label: "Support" },
             { number: "10x", label: "ROI Increase" },
           ].map((stat, index) => (
             <motion.div

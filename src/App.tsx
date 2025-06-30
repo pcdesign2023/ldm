@@ -11,6 +11,7 @@ import LocalMapSection from './components/LocalMapSection';
 import TestimonialsSection from './components/TestimonialsSection';
 import Footer from './components/Footer';
 import ContactModal from './components/ContactModal';
+import CallButton from './components/CallButton';
 import { loadAndProcessContent, ProcessedContent } from './utils/contentProcessor';
 import BeforeAfterSliderSection from './components/BeforeAfterSliderSection';
 
@@ -89,6 +90,7 @@ function App() {
       
       <Footer onCtaClick={openModal} />
       <ContactModal open={modalOpen} onClose={() => setModalOpen(false)} />
+      <CallButton />
     </div>
   );
 }

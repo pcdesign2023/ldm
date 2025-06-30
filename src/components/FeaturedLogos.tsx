@@ -74,7 +74,7 @@ const FeaturedLogos: React.FC<FeaturedLogosProps> = ({ logos }) => {
             { number: "55+", label: "Ranked business" },
             { number: "1500+", label: "Posts Generated" },
             { number: "99.9%", label: "Uptime" },
-            { number: "24/7", label: "AI Support" },
+            { number: "24/7", label: " Support" },
           ].map((stat, index) => (
             <motion.div
               key={stat.label}
