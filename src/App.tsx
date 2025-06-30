@@ -13,6 +13,7 @@ import Footer from './components/Footer';
 import CallButton from './components/CallButton';
 import { loadAndProcessContent, ProcessedContent } from './utils/contentProcessor';
 import BeforeAfterSliderSection from './components/BeforeAfterSliderSection';
+import ContactModal from './components/ContactModal';
 
 function App() {
   const [content, setContent] = useState<ProcessedContent | null>(null);
@@ -97,8 +98,8 @@ function App() {
       <OptimizationSection onCtaClick={openModal} />
       <LocalMapSection onCtaClick={openModal} />
       <TestimonialsSection onCtaClick={openModal} />
-      
       <Footer onCtaClick={openModal} />
+      <ContactModal open={modalOpen} onClose={() => setModalOpen(false)} />
       <CallButton />
     </div>
   );

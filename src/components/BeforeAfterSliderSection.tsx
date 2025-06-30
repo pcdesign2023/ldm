@@ -2,10 +2,17 @@ import React from 'react';
 import BeforeAfterSlider from 'react-before-after-slider-component';
 import 'react-before-after-slider-component/dist/build.css';
 
-const hvacBefore = 'https://cdn.prod.website-files.com/66339c43cbff20ea82838f5e/6706490a5d259681ac937fc1_hvac-contractor1.webp';
-const hvacAfter = 'https://cdn.prod.website-files.com/66339c43cbff20ea82838f5e/670649113c0f63393c82c8d6_hvac-contractor2.webp';
-const closetBefore = 'https://cdn.prod.website-files.com/66339c43cbff20ea82838f5e/670649536f32e9d60c4ec579_closet-remodeler1.webp';
-const closetAfter = 'https://cdn.prod.website-files.com/66339c43cbff20ea82838f5e/6706495ade6b80061d026acf_closet-remodeler2.webp';
+// Italian Restaurant
+const italianBefore = 'https://cdn.prod.website-files.com/66339c43cbff20ea82838f5e/66b24869da7733fb750b87e8_your-closet-self-storage-car-storage-13x13-20240508-1956-headless.webp';
+const italianAfter = 'https://cdn.prod.website-files.com/66339c43cbff20ea82838f5e/66b2486d31394dfc68285462_your-closet-self-storage-car-storage-13x13-20240610-1831-headless.webp';
+
+// Business Contractor
+const contractorBefore = 'https://cdn.prod.website-files.com/66339c43cbff20ea82838f5e/6706407ec26c5aadf9938a07_contractor1.webp';
+const contractorAfter = 'https://cdn.prod.website-files.com/66339c43cbff20ea82838f5e/6706408343c749570370116c_contractor2.webp';
+
+// SPA
+const spaBefore = 'https://cdn.prod.website-files.com/66339c43cbff20ea82838f5e/6705451d808e7aa961d69a33_01.webp';
+const spaAfter = 'https://cdn.prod.website-files.com/66339c43cbff20ea82838f5e/67054558db471a00af3c3b74_02.webp';
 
 const BeforeAfterSliderSection: React.FC = () => (
   <section className="bg-gradient-to-b from-gray-900 to-gray-800 py-20">
@@ -16,24 +23,34 @@ const BeforeAfterSliderSection: React.FC = () => (
       <p className="text-gray-400 mb-8">
         Drag the sliders to compare the Google Business Profile before and after using LDM.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-        {/* HVAC Contractor Slider */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        {/* Italian Restaurant Slider */}
         <div>
-          <h3 className="text-xl font-semibold text-white mb-4">HVAC Contractor</h3>
+          <h3 className="text-xl font-semibold text-white mb-4">Italian Restaurant</h3>
           <div className="w-full max-w-2xl mx-auto rounded-xl overflow-hidden shadow-2xl bg-black">
             <BeforeAfterSlider
-              firstImage={{ imageUrl: hvacBefore }}
-              secondImage={{ imageUrl: hvacAfter }}
+              firstImage={{ imageUrl: italianBefore }}
+              secondImage={{ imageUrl: italianAfter }}
             />
           </div>
         </div>
-        {/* Closet Remodeler Slider */}
+        {/* Business Contractor Slider */}
         <div>
-          <h3 className="text-xl font-semibold text-white mb-4">Closet Remodeler</h3>
+          <h3 className="text-xl font-semibold text-white mb-4">Business Contractor</h3>
           <div className="w-full max-w-2xl mx-auto rounded-xl overflow-hidden shadow-2xl bg-black">
             <BeforeAfterSlider
-              firstImage={{ imageUrl: closetBefore }}
-              secondImage={{ imageUrl: closetAfter }}
+              firstImage={{ imageUrl: contractorBefore }}
+              secondImage={{ imageUrl: contractorAfter }}
+            />
+          </div>
+        </div>
+        {/* SPA Slider */}
+        <div>
+          <h3 className="text-xl font-semibold text-white mb-4">SPA</h3>
+          <div className="w-full max-w-2xl mx-auto rounded-xl overflow-hidden shadow-2xl bg-black">
+            <BeforeAfterSlider
+              firstImage={{ imageUrl: spaBefore }}
+              secondImage={{ imageUrl: spaAfter }}
             />
           </div>
         </div>
